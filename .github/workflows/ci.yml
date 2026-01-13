@@ -29,7 +29,9 @@ jobs:
           find . -maxdepth 4 -name gradlew -print
 
       - name: Test
-        run: ./demo/gradlew test
+        working-directory: demo
+        run: ./gradlew test
 
       - name: Build
-        run: ./demo/gradlew build -x test
+        working-directory: demo
+        run: ./gradlew build -x test
