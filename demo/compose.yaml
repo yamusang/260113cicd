@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    container_name: demo-app
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: demo-cloudflared
+    restart: unless-stopped
+    depends_on:
+      - app
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CF_TUNNEL_TOKEN}
