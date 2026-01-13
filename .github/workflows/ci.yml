@@ -30,4 +30,4 @@ jobs:
         run: ./demo/gradlew test
 
       - name: Build
-        run: ./gradlew build -x test
+        run: ./demo/gradlew build -x test
