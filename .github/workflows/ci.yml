@@ -19,6 +19,8 @@ jobs:
           java-version: "21"
           cache: "gradle"
 
+      - name: Make gradlew executable
+        run: chmod +x demo/gradlew
 
       - name: Debug where gradlew is
         run: |
