@@ -19,6 +19,13 @@ jobs:
           java-version: "21"
           cache: "gradle"
 
+
+      - name: Debug where gradlew is
+        run: |
+          pwd
+          ls -al
+          find . -maxdepth 4 -name gradlew -print
+
       - name: Test
         run: ./gradlew test
 
