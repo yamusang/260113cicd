@@ -27,7 +27,7 @@
 }
 
 body {
-    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg-primary);
     color: var(--text-primary);
     min-height: 100vh;
@@ -311,11 +311,6 @@ body::before {
     margin-bottom: 8px;
 }
 
-.question-category {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
-
 .options-container {
     display: flex;
     flex-direction: column;
@@ -342,11 +337,6 @@ body::before {
     background: rgba(99, 102, 241, 0.1);
     border-color: var(--accent-primary);
     transform: translateX(8px);
-}
-
-.option-btn.selected {
-    background: rgba(99, 102, 241, 0.15);
-    border-color: var(--accent-primary);
 }
 
 .option-btn.correct {
@@ -560,10 +550,6 @@ body::before {
 .restart-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
-}
-
-.hidden {
-    display: none !important;
 }
 
 @media (max-width: 640px) {

@@ -1,5 +1,5 @@
 // AI 퀴즈 문제 데이터베이스
-const quizData = {
+export const quizData = {
     science: {
         easy: [
             {
@@ -492,18 +492,28 @@ const quizData = {
     }
 };
 
+// 카테고리 이름 매핑
+export const categoryNames = {
+    science: '과학',
+    history: '역사',
+    general: '상식',
+    it: 'IT',
+    math: '수학',
+    mixed: '랜덤'
+};
+
 // 문제 랜덤 선택 함수
-function getRandomQuestions(category, difficulty, count = 10) {
+export function getRandomQuestions(category, difficulty, count = 10) {
     const questions = quizData[category][difficulty];
     const shuffled = [...questions].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, Math.min(count, shuffled.length));
 }
 
 // 전체 카테고리에서 랜덤 문제 선택
-function getMixedQuestions(difficulty, count = 10) {
+export function getMixedQuestions(difficulty, count = 10) {
     const allQuestions = [];
     Object.keys(quizData).forEach(category => {
-        allQuestions.push(...quizData[category][difficulty].map(q => ({...q, category})));
+        allQuestions.push(...quizData[category][difficulty].map(q => ({ ...q, category })));
     });
     const shuffled = allQuestions.sort(() => Math.random() - 0.5);
     return shuffled.slice(0, count);
