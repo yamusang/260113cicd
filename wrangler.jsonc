@@ -1,5 +1,5 @@
 {
-  "name": "260113cicd",
+  "name": "your-worker-name",
   "compatibility_date": "2026-01-13",
   "assets": {
     "directory": "./dist"
