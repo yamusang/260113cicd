@@ -59,7 +59,7 @@ function App() {
             <header className="header">
                 <div className="logo">🧠</div>
                 <h1 className="title">AI 퀴즈 마스터</h1>
-                <p className="subtitle">당신의 지식을 테스트해보세요!</p>
+                <p className="subtitle">당신의 지식을 테스트해보세요!!</p>
             </header>
 
             {screen === 'start' && (
